@@ -9,3 +9,13 @@ Type the license name.
 Finally type yes if its all okay.
 (A package.json file will be created inside the package folder)
 
+
+(Now install some required dependencies)
+1. npm install --save-dev react react-dom
+2. List react and react-dom inside "peerdependencies" as well as "devdependencies"
+3. Install storybook by typing --> npx sb init
+   3.1 Installing storybook will also install babel-core and babel loader along with all library of storybook.
+   3.2 It will also add an empty list of dependencies.
+   3.3 Two new command script will be added.(storybook, build-storybook)
+
+Now create the list of components inside src/components and export all the components in index.tsx file inside src folder.
