@@ -22,3 +22,39 @@ Now create the list of components inside src/components and export all the compo
 
 Now to create a dist folder so as to publish in npm we will use rollup.js module bundler and some plugins--
 1. npm install rollup rollup-plugin-babel @rollup/plugin-node-resolve rollup-plugin-peer-deps-external --save-dev
+2. rollup-plugin-babel allows us to integrate with babel config(install using @babel/preset-react)
+3. 
+
+Now to use rollup create a file at root level and named it as rollup.config.js-->
+
+import babel from 'rollup-plugin-babel';
+import resolve from '@rollup/plugin-node-resolve';
+import external from 'rollup-plugin-peer-deps-external';
+
+export default [
+    {
+        input: "./src/index.tsx",
+        output: [
+            {
+                file: "dist/index.tsx",
+                format: "cjs"
+            },
+            {
+                file: "dist/index.es.tsx",
+                format: "es",
+                export: "named",
+            }
+        ],
+        plugins: [
+            babel({
+                exclude: "node_modules/**",
+                presets: ["@babel/preset-react"],
+            }),
+            external(),
+            resolve(),
+        ]
+    }
+]
+
+
+
