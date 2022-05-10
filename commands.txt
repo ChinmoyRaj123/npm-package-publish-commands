@@ -1,0 +1,11 @@
+First create an empty folder with the package name.
+Type-->  npm init
+Leave the package name and version as it is shown. (You can later change the package name in package.json file if package name already taken)
+Give a description of your own.
+Leave the entry point as index.js
+test command, git repository and keywords are optional.
+Type the author name.
+Type the license name.
+Finally type yes if its all okay.
+(A package.json file will be created inside the package folder)
+
