@@ -20,4 +20,5 @@ Finally type yes if its all okay.
 
 Now create the list of components inside src/components and export all the components in index.tsx file inside src folder.
 
-Now to create a dist folder so as to publish in npm we will use rollup.js module bundler.
+Now to create a dist folder so as to publish in npm we will use rollup.js module bundler and some plugins--
+1. npm install rollup rollup-plugin-babel @rollup/plugin-node-resolve rollup-plugin-peer-deps-external --save-dev
