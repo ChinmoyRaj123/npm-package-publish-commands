@@ -56,5 +56,11 @@ export default [
     }
 ]
 
+Now enter a command in the script in package.json --> "build-lib": "rollup -c"
 
+
+
+Trying to run typescript with rollup
+npm install typescript
+npm install --save-dev @open-wc/building-rollup rimraf deepmerge
 
